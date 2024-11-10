@@ -54,6 +54,7 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInfo) => {
         displayName,
         email,
         createdDt,
+        ...additionalInfo,
       });
     } catch (error) {
       console.error("Error creating user document", error.message);
